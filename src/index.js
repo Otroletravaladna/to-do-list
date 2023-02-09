@@ -1,5 +1,6 @@
 import "./style.css";
 import * as data from "./data.js";
+import * as ui from "./ui.js";
 
 const popUpNote = (() => {
     document.querySelector(".open-button").addEventListener("click", () => {
@@ -12,15 +13,10 @@ const popUpNote = (() => {
 
 })();
 
+//fix this 
 
-export const ProjectRow = (() =>  {
-
-    let projects = [];
-
-    data.archive.forEach(e => {
-        if (projects.includes(e.project) == false){ projects.push(e.project) };
-    });
-
-    console.log(projects);
-})();
-
+const def = document.querySelector(".project");
+def.addEventListener("click", () => {
+    let navBar = document.querySelector(".todo-list")
+    navBar.classList.toggle("active")
+})

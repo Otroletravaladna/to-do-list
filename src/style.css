@@ -93,3 +93,63 @@ header {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+
+/*nav bar test*/
+
+.default {
+  height: min-content;
+}
+
+.todo-list ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list ul li a {
+  display: block;
+  color: #04AA6D;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  transition: .5s;
+  margin: 0 5px;
+}
+
+.todo-list ul li a:hover { 
+  color: #000;
+  background: #fff;
+}
+
+.todo-list ul li a.active {
+  color: #fff;
+  background: #000;
+}
+
+.todo-list {
+  height: 0;
+  position: relative;
+  background: #000;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.todo-list.active {
+  height: 300px;
+}
+
+.todo-list.active ul {
+  opacity: 1;
+}
+
+.todo-list ul {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+  transition: .5s;
+  opacity: 0;
+}
+
+
+.todo-list ul li a {
+  color: red;
+}
