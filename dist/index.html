@@ -8,30 +8,36 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-<button class="open-button">Make new To-Do</button>
+  <header><h1>To-Do List</h1></header>
 
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
+  <div class="container">
+    <div class="todo-list">aaa
+    </div>
+  </div>
 
-    <label for="title"><b>Title</b></label>
-    <input type="text" placeholder="Enter new to-do" name="title" id="title" required>
+  <button class="open-button">Make new To-Do</button>
 
-    <label for="desc"><b>Description</b></label>
-    <input type="text" placeholder="Enter Description" name="desc"  id="desc" required>
+  <div class="form-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+      <h1>Login</h1>
+      <label for="title"><b>Title</b></label>
+      <input type="text" placeholder="Enter new to-do" name="title" id="title" required>
 
-    <label for="due-date"><b>Due date</b></label>
-    <input type="date" placeholder="Enter due-date" name="date"  id="date" required>
+      <label for="desc"><b>Description</b></label>
+      <input type="text" placeholder="Enter Description" name="desc"  id="desc" required>
 
-    <label for="priority"><b>Priority</b></label>
-    <input type="priority" placeholder="Priority" name="priority"  id="priority" required>
+      <label for="due-date"><b>Due date</b></label>
+      <input type="date" placeholder="Enter due-date" name="date"  id="date" required>
 
-    <label for="project">Project</label>
-    <input type="text" placeholder="Which is my project?" name="project" id="project">
+      <label for="priority"><b>Priority</b></label>
+      <input type="text" placeholder="Priority" name="priority"  id="priority" required>
 
-    <button type="submit" class="btn">Submit</button>
-    <button type="button" class="btn cancel">Close</button>
-  </form>
-</div>
+      <label for="project">Project</label>
+      <input type="text" placeholder="Which is my project?" name="project" id="project">
+
+      <button type="submit" class="btn">Submit</button>
+      <button type="button" class="btn cancel">Close</button>
+    </form>
+  </div>
 </body>
 </html>

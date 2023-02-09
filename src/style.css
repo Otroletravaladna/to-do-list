@@ -1,3 +1,25 @@
+body{
+  margin: 0;
+  
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+
+  background: lightcoral;
+}
+
+header {
+  grid-area: 1 / 1 / 2 / 4;
+
+  background: lightblue;
+}
+
+.container {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 100%;
+
+  background: lightcyan;
+}
+
 
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -32,7 +54,9 @@
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text],
+.form-container input[type=password],
+.form-container input[type=date] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -41,7 +65,9 @@
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus,
+ .form-container input[type=password]:focus,
+ .form-container input[type=date]:focus{
   background-color: #ddd;
   outline: none;
 }

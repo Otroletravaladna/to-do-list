@@ -1,7 +1,6 @@
 import "./style.css";
-import { Todo } from "./data.js";
+import * as data from "./data.js";
 
-const form = document.querySelector("form");
 const popUpNote = (() => {
     document.querySelector(".open-button").addEventListener("click", () => {
         document.getElementById("myForm").style.display = "block";
@@ -13,14 +12,15 @@ const popUpNote = (() => {
 
 })();
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let newTodo = new Todo();
-    archive.push(newTodo);
-    
-    localStorage.setItem("todoList", JSON.stringify(archive));
-});
 
-let archive = JSON.parse(localStorage.getItem("todoList")) || [];
+export const ProjectRow = (() =>  {
 
-console.table(archive);
+    let projects = [];
+
+    data.archive.forEach(e => {
+        if (projects.includes(e.project) == false){ projects.push(e.project) };
+    });
+
+    console.log(projects);
+})();
+
