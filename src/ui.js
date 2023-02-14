@@ -10,17 +10,16 @@ export const projectRow = () =>  {
     projects.forEach(e => {
         let container = document.querySelector(".container");
         let newRow = document.createElement("div");
-        newRow.classList.add("project", e);
         let rowTitle = document.createElement("h2");
-        rowTitle.textContent = e;
         let nav = document.createElement("nav");
-        nav.classList.add("todo-list");
         let ul = document.createElement("ul");
+
+        newRow.classList.add("project", e);
+        rowTitle.id = e;
+        rowTitle.textContent = e;
+        nav.classList.add("todo-list", e);
         ul.classList.add(e);
-
-
-
-        
+  
         container.appendChild(newRow);
         newRow.append(rowTitle, nav);
         nav.appendChild(ul);

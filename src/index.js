@@ -13,12 +13,15 @@ const popUpNote = (() => {
 
 })();
 
+const todoNav = (() => {
+    const def = document.querySelectorAll("h2");
+    def.forEach(e => {
+    e.addEventListener("click", () => {
+        let navBar = document.querySelector(`nav[class~=${e.id}]`);
+        navBar.classList.toggle("active");
+        })
+    });
+    
+})();
 
-//fix this 
-
-const def = document.querySelector("h2");
-def.addEventListener("click", () => {
-    let navBar = document.querySelector(".todo-list")
-    navBar.classList.toggle("active")
-})
 
