@@ -178,6 +178,10 @@ header {
   animation: pop-out .4s;
 }
 
+a, h2{
+  cursor: pointer;
+}
+
 @keyframes pop-out {
   0% {transform: scale(0);}
   100% {transform: scale(1);}
