@@ -25,8 +25,8 @@ const todoNav = (() => {
 
 const popDataTodo = (() => {
     const a = document.querySelectorAll(`a[class~=task]`);
-    let popUpBg = document.querySelector(".popup-bg");
-    let popUpContainer = document.querySelector(".popup-container");
+    let popUpBg = document.querySelector(".popupBg");
+    let popUpContainer = document.querySelector(".popupContainer");
 
     function popSwitch() {
         popUpContainer.classList.toggle("active");
@@ -35,13 +35,16 @@ const popDataTodo = (() => {
     
     a.forEach(e => { e.onclick = () => {popSwitch()};});
     
-    popUpBg.addEventListener("click", () => {
-        popUpContainer.style.animation = "pop-in 400ms";
-        setTimeout(() => {
-            popSwitch();
-            popUpContainer.style.animation = "";
-        }, 300)
+    popUpBg.addEventListener("click", (e) => {
+        if (e.target !== popUpContainer){
+            popUpContainer.style.animation = "pop-in 400ms";
+            setTimeout(() => {
+                popSwitch();
+                popUpContainer.style.animation = "";
+            }, 300)
+        }
     })
 })();
+
 
 

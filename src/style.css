@@ -95,11 +95,7 @@ header {
   opacity: 1;
 }
 
-/*nav bar test*/
-
-.default {
-  height: min-content;
-}
+/*nav bar */
 
 .todo-list ul {
   display: flex;
@@ -108,7 +104,7 @@ header {
 
 .todo-list ul li a {
   display: block;
-  color: #04AA6D;
+  color: #fff;
   font-size: 20px;
   padding: 5px 10px;
   border-radius: 15px;
@@ -150,16 +146,10 @@ header {
   opacity: 0;
 }
 
-
-.todo-list ul li a {
-  color: red;
-}
-
 /* popoup */
 
-.popup-bg {
-  background: #000;
-  opacity: .3;
+.popupBg {
+  background: rgba(0, 0, 0, .3);
 
   width: 100%;
   height: 90vh;
@@ -167,13 +157,15 @@ header {
   display: none;
 }
 
-.popup-bg.active {
+.popupBg.active {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
 }
 
-.popup-container {
+.popupContainer {
   width: 40%;
   height: 50%;
   background: #fff;
@@ -181,8 +173,7 @@ header {
   transform: scale(0);
 }
 
-.popup-container.active {
-  display: block;
+.popupContainer.active {
   transform: scale(1);
   animation: pop-out .4s;
 }
