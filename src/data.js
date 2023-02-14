@@ -21,36 +21,6 @@ export const addTodo = (() => {
     });
 
     
+    console.table(archive);
 })();
 
-console.table(archive);
-
-// for (let item of data.archive) {
-//     console.log(Object.values(indexOf(item)));
-//     // Object.values(item).forEach((e) => {
-//     //     console.log(e);
-//     // })
-// }
-
-// data.archive.forEach(item => {
-//     //crear contenedor de projectos
-//     //identificar el contenedor asignandole el item.project como clase.
-//     console.log(item.project)
-//     Object.values(item).forEach(e => {
-//         //crear y distribuir propiedades en ui.
-//         // console.log(e);
-//     });
-// });
-
-export function ProjectRow() {
-
-    let projects = [];
-
-    archive.forEach(e => {
-        if (project.includes(e.project) === false){
-            projects.push(e.project);
-        }
-    });
-
-    console.log(projects);
-}

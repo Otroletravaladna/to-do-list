@@ -1,6 +1,6 @@
 import * as data from "./data.js"
 
-export const ProjectRow = (() =>  {
+export const projectRow = () =>  {
     let projects = [];
 
     data.archive.forEach(e => {
@@ -13,41 +13,42 @@ export const ProjectRow = (() =>  {
         newRow.classList.add("project", e);
         let rowTitle = document.createElement("h2");
         rowTitle.textContent = e;
-        
-        container.appendChild(newRow);
-        newRow.append(rowTitle);
-
-    })
-
-})();
-
-export const todoList = (() => {
-
-    let newRow = document.querySelectorAll(".project");
-    newRow.forEach(e => {
         let nav = document.createElement("nav");
         nav.classList.add("todo-list");
-        e.appendChild(nav);
         let ul = document.createElement("ul");
+        ul.classList.add(e);
+
+
+
+        
+        container.appendChild(newRow);
+        newRow.append(rowTitle, nav);
         nav.appendChild(ul);
-    });
 
-    data.archive.forEach(e => {
-        let a = document.getElementsByClassName(e.project);
-        let ul = document.querySelectorAll("ul");
-        ul.forEach(element => {
-            let li = document.createElement("li"); 
-            element.appendChild(li);   
-            let a = document.createElement("a");
-            a.textContent = e.title;
-
-            li.appendChild(a);
-        });
-        console.log(a);
     })
+
+    return {projects};
     
-})();
+};
 
+export const todoList = () => {
+    const {projects} = projectRow();
+    
+    projects.forEach(e => {
+        for(const item of data.archive){
+            if(item.project == e){
+                let ul = document.querySelector(`ul[class=${e}]`)
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+                a.textContent = item.title;
 
+                ul.appendChild(li);
+                li.appendChild(a);
+            }
+        }
+    });
+};
+
+todoList();
 
     

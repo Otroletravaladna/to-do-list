@@ -13,10 +13,12 @@ const popUpNote = (() => {
 
 })();
 
+
 //fix this 
 
-const def = document.querySelector(".project");
+const def = document.querySelector("h2");
 def.addEventListener("click", () => {
     let navBar = document.querySelector(".todo-list")
     navBar.classList.toggle("active")
 })
+
