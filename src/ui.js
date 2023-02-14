@@ -39,6 +39,8 @@ export const todoList = () => {
                 let ul = document.querySelector(`ul[class=${e}]`)
                 let li = document.createElement("li");
                 let a = document.createElement("a");
+
+                a.classList.add("task", data.archive.indexOf(item));
                 a.textContent = item.title;
 
                 ul.appendChild(li);
