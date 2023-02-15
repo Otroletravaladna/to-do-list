@@ -10,7 +10,7 @@ export const Todo = function() {
 export let archive = JSON.parse(localStorage.getItem("todoList")) || [];
 
 export const addTodo = (() => {
-    const form = document.querySelector("form");
+    const form = document.querySelector(".form-container");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -23,4 +23,5 @@ export const addTodo = (() => {
     
     console.table(archive);
 })();
+
 

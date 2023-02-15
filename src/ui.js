@@ -50,6 +50,25 @@ export const todoList = () => {
     });
 };
 
-todoList();
-
+export const taskDisplay = () => {
     
+    const task = document.querySelectorAll(".task");
+    task.forEach(e => {
+        e.addEventListener("click", (item) => {
+            let index = item.target.className.slice(-1);
+            let archiveObj = data.archive[index];
+            displayData(archiveObj);
+        })
+    });
+    
+    function displayData(archiveObj){
+        document.querySelector(".task-info > h1").textContent = archiveObj.title;
+        document.querySelector(".task-info > #desc").placeholder = archiveObj.desc;
+        document.querySelector(".task-info > #date").placeholder = archiveObj.dueDate;
+        document.querySelector(".task-info > #priority").placeholder = archiveObj.priority;
+        document.querySelector(".task-info > #project").placeholder = archiveObj.project;
+    }
+}
+
+todoList();
+taskDisplay();

@@ -38,7 +38,27 @@
   </div>
   
   <div class="popupBg">
-    <div class="popupContainer"></div>
+    <div class="popupContainer">
+      <div >
+        <form action="/action_page.php" class="task-info">
+          <h1></h1>
+    
+          <label for="desc"><b>Description</b></label>
+          <input type="text" name="desc"  id="desc" readonly>
+    
+          <label for="due-date"><b>Due date</b></label>
+          <input type="text" name="date"  id="date" required>
+    
+          <label for="priority"><b>Priority</b></label>
+          <input type="text" name="priority"  id="priority" required>
+    
+          <label for="project">Project</label>
+          <input type="text" name="project" id="project">
+    
+          <button type="submit" class="btn">Save changes</button>
+          <button type="button">Close</button>
+        </form>
+    </div>
   </div>
 </body>
 </html>
