@@ -55,9 +55,9 @@ export const taskDisplay = () => {
     const task = document.querySelectorAll(".task");
     task.forEach(e => {
         e.addEventListener("click", (item) => {
-            let index = item.target.className.slice(-1);
-            let archiveObj = data.archive[index];
-            displayData(archiveObj, index);
+            let index = item.target.className.split(" ");
+            let archiveObj = data.archive[index[1]];
+            displayData(archiveObj, index[1]);
         })
     });
     
