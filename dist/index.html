@@ -47,13 +47,19 @@
           <input type="text" name="desc"  id="desc" readonly>
     
           <label for="due-date"><b>Due date</b></label>
-          <input type="text" name="date"  id="date" required>
+          <input type="date" name="date"  id="date">
     
           <label for="priority"><b>Priority</b></label>
-          <input type="text" name="priority"  id="priority" required>
+          <input type="text" name="priority"  id="priority">
     
           <label for="project">Project</label>
           <input type="text" name="project" id="project">
+
+          <label for="index"></label>
+          <input type="text" name="index" id="index" readonly>
+
+          <label for="check">Is done?</label>
+          <input type="checkbox" id="check" name="check" value="true">
     
           <button type="submit" class="btn">Save changes</button>
           <button type="button">Close</button>

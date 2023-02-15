@@ -57,16 +57,18 @@ export const taskDisplay = () => {
         e.addEventListener("click", (item) => {
             let index = item.target.className.slice(-1);
             let archiveObj = data.archive[index];
-            displayData(archiveObj);
+            displayData(archiveObj, index);
         })
     });
     
-    function displayData(archiveObj){
+    function displayData(archiveObj, index){
         document.querySelector(".task-info > h1").textContent = archiveObj.title;
-        document.querySelector(".task-info > #desc").placeholder = archiveObj.desc;
-        document.querySelector(".task-info > #date").placeholder = archiveObj.dueDate;
-        document.querySelector(".task-info > #priority").placeholder = archiveObj.priority;
-        document.querySelector(".task-info > #project").placeholder = archiveObj.project;
+        document.querySelector(".task-info > #desc").value = archiveObj.desc;
+        document.querySelector(".task-info > #date").value = archiveObj.dueDate;
+        document.querySelector(".task-info > #priority").value = archiveObj.priority;
+        document.querySelector(".task-info > #project").value = archiveObj.project;
+        document.querySelector(".task-info > #check").checked = archiveObj.check;
+        document.querySelector(".task-info > #index").value = index;
     }
 }
 
