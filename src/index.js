@@ -13,6 +13,7 @@ const popAddTodo = (() => {
 
 })();
 
+
 const todoNav = (() => {
     const h2 = document.querySelectorAll("h2");
     h2.forEach(e => {
@@ -23,7 +24,7 @@ const todoNav = (() => {
     });
 })();
 
-const popTodoData = (() => {
+export const popTodoData = (() => {
     const a = document.querySelectorAll(`a[class~=task]`);
     let popUpBg = document.querySelector(".popupBg");
     let popUpContainer = document.querySelector(".popupContainer");
@@ -54,7 +55,4 @@ const popTodoData = (() => {
     }
     
 })();
-
-
-
 

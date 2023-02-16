@@ -50,6 +50,12 @@ export function editTodo(){
         localStorage.setItem("todoList", JSON.stringify(archive));
         
     }
+
+    const h2 = document.querySelectorAll("h2");
+    h2.forEach(e => {
+        e.addEventListener("click", () => {console.log("wking")});
+        
+    });
     
 }
 
