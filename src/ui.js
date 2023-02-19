@@ -82,6 +82,39 @@ export const taskDisplay = () => {
     }
 }
 
-// todoList();
+export function deleteBtn() {
+    const projectContainer = document.querySelectorAll(".todo-list > ul> li");
+
+    const createBtn = (e) => {
+        const deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("delete-btn");
+        e.appendChild(deleteBtn);
+
+        deleteBtn.addEventListener("click", () => {
+            let index = e.children[0].className.split(" ");
+            data.removeTask(index);
+            removeTask(e)
+        })
+    }
+    
+    projectContainer.forEach(e => {
+        createBtn(e);
+    })
+    
+}
+
+function removeTask(e) {
+    let parent = e.parentElement;
+    e.remove();
+    
+    if (parent.childNodes.length < 1){
+        parent.parentElement.classList.remove("active");
+        setTimeout(() => {
+            document.querySelector(`div[class~=${parent.className}]`).remove();
+        }, 380);
+    };
+}
+
 projectRows();
 taskDisplay();
+deleteBtn();

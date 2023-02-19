@@ -40,7 +40,6 @@ export function editTodo(){
     })
 
     function makeChanges(changes) {
-        console.log(changes);
         let index = changes[4];
         archive[index].dueDate = changes[1].pop();
         archive[index].priority = changes[2].toString();
@@ -50,17 +49,14 @@ export function editTodo(){
         localStorage.setItem("todoList", JSON.stringify(archive));
         
     }
-
-    const h2 = document.querySelectorAll("h2");
-    h2.forEach(e => {
-        e.addEventListener("click", () => {console.log("wking")});
-        
-    });
-    
 }
 
 editTodo();
 
-console.table(archive);
-
+export function removeTask(index) {
+    
+    archive.splice(index[1], 1);
+    
+    localStorage.setItem("todoList", JSON.stringify(archive));
+}
 
