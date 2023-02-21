@@ -77,7 +77,7 @@ export const taskDisplay = () => {
         document.querySelector(".task-info > #date").value = archiveObj.dueDate;
         document.querySelector(".task-info > #priority").value = archiveObj.priority;
         document.querySelector(".task-info > #project").value = archiveObj.project;
-        document.querySelector(".task-info > #check").checked = archiveObj.check;
+        document.querySelector("#check").checked = archiveObj.check;
         document.querySelector(".task-info > #index").value = index;
     }
 }
