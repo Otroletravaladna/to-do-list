@@ -29,6 +29,7 @@ export const popTodoData = (() => {
     let popUpBg = document.querySelector(".popupBg");
     let popUpContainer = document.querySelector(".popupContainer");
     let closeBtn = document.querySelector(".close-btn")
+    let saveChangesBtn = document.querySelector(".btn-changes");
     
     a.forEach(e => { e.onclick = () => { popSwitch() }});
 
@@ -43,7 +44,8 @@ export const popTodoData = (() => {
             exitTodo();
         }
     });
-    
+
+    saveChangesBtn.onclick = () => { exitTodo() };
     
     function popSwitch() {
         popUpContainer.classList.toggle("active");
